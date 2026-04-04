@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng kí</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- BÊN TRÁI -->
+      <div class="left">
+        <h1>Welcome to the website</h1>
+        <p>RIKKEI EDUCATION</p>
+      </div>
+      <!-- FORM -->
+      <form class="form-box">
+        <div class="row">
+          <input type="text" placeholder="First name" id="firstName" />
+          <input type="text" placeholder="Last name" id="lastName" />
+        </div>
+        <input type="email" placeholder="Email address" id="email" />
+        <input type="password" placeholder="Password" id="password" />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirmPassword"
+        />
+        <button id="registerBtn" type="submit">Sign up</button>
+        <p class="login-text">
+          Already have an account? <a href="./login.html"><span>login</span></a>
+        </p>
+      </form>
+      <!-- SHAPE -->
+      <div class="circle"></div>
+      <div class="blob"></div>
+    </div>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

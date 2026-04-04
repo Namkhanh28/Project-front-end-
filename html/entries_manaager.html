@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/entries_manager.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <a href=""><b>RIKKEI_EDU_BLOG</b></a>
+      🔔
+      <img src="https://i.pravatar.cc/40" />
+    </div>
+
+    <div class="container">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="menu">👤 Manage Users</div>
+        <div class="menu">📄 Manage Entries</div>
+        <div class="menu">📝 Manage Article</div>
+        <div class="menu">🚪 Log out</div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <!-- SEARCH -->
+        <div class="search-box">
+          <input placeholder="Search Article Categories" />
+        </div>
+        <!-- CARD -->
+        <div class="card">
+          <div class="title">📁 Manage Categories</div>
+
+          <!-- FORM -->
+          <div class="form-group">
+            <label>Category Name:</label>
+            <input id="input-entries" placeholder="Enter category name" />
+          </div>
+          <button onclick="addEntries()" class="add-btn">Add Category</button>
+          <!-- TABLE -->
+          <h4>📋 Category List</h4>
+          <table>
+            <thead>
+              <th>#</th>
+              <th>Category Name</th>
+              <th>Actions</th>
+            </thead>
+            <tbody id="entries-article">
+              <tr>
+                <td>1</td>
+                <td>Nấu ăn</td>
+                <td>
+                  <button onclick="updateData()" class="btn edit">Sửa</button>
+                  <button onclicK="deleteEntries()" class="btn delete">
+                    Xóa
+                  </button>
+                </td>
+              </tr>
+
+              <!-- <tr>
+                <td>2</td>
+                <td>IT</td>
+                <td>
+                  <button class="btn edit">Sửa</button>
+                  <button class="btn delete">Xóa</button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/entries_manager.js"></script>
+  </body>
+</html>

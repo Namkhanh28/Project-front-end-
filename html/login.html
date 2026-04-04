@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT IMAGE -->
+      <div class="left">
+        <div class="image-box">
+          <img
+            src="../assets/images/a6f14c1fa6846f29f11dc2e85f40b29fbcc92d57.png"
+            alt="illustration"
+          />
+        </div>
+      </div>
+
+      <!-- RIGHT LOGIN -->
+      <div class="right">
+        <div class="social">
+          <span>Sign in with</span>
+          <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+
+        <p class="or">Or</p>
+
+        <form id="loginForm">
+          <input
+            type="email"
+            placeholder="Enter a valid email address"
+            id="email"
+          />
+          <label>Email address</label>
+
+          <input type="password" placeholder="Enter password" id="password" />
+          <label>Password</label>
+
+          <button type="submit">Login</button>
+
+          <p class="register">
+            Don't have an account? <a href=""> <span>Register</span></a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="footer-content">Copyright © 2025. All rights reserved.</p>
+      <div class="social-logo">
+        <a href="#" class="fa-brands fa-linkedin-in"></a>
+        <a href="#" class="fa-brands fa-facebook-f"></a>
+        <a href="#" class="fa-brands fa-google"></a>
+        <a href="#" class="fa-brands fa-twitter"> </a>
+      </div>
+    </footer>
+    <script src="../js/login.js"></script>
+  </body>
+</html>

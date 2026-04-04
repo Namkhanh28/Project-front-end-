@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lí người dùng</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/user_manager.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <a href=""><b>RIKKEI_EDU_BLOG</b></a>
+      🔔
+      <img src="https://i.pravatar.cc/40" />
+    </div>
+
+    <div class="container">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="menu-item">📋 Manage Users</div>
+        <div class="menu-item">📄 Manage Entries</div>
+        <div class="menu-item">📝 Manage Article</div>
+        <div class="menu-item">🚪 Log out</div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <div class="top-bar">
+          <div class="members">
+            <b>Team members</b> <span style="color: #6c63ff">100 users</span>
+          </div>
+          <input id="searchUser" class="search" placeholder="Search user" />
+        </div>
+
+        <!-- TABLE -->
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Email address</th>
+            <th>Actions</th>
+          </tr>
+          <!-- ROW -->
+          <tbody id="userTable">
+            <!-- <tr>
+              <td>
+                <div class="user">
+                  <img src="https://i.pravatar.cc/40?img=1" />
+                  <div>
+                    Olivia Rhye<br />
+                    <span class="username">@olivia</span>
+                  </div>
+                </div>
+              </td>
+              <td class="status">hoạt động</td>
+              <td>olivia@untitledui.com</td>
+              <td class="action">
+                <a class="block">block</a>
+                <a class="unblock">unblock</a>
+              </td>
+            </tr>
+            <tr>
+              <td> -->
+                <!-- <div class="user">
+                  <img src="https://i.pravatar.cc/40?img=2" />
+                  <div>
+                    Phoenix Baker<br />
+                    <span class="username">@phoenix</span>
+                  </div>
+                </div>
+              </td>
+              <td class="status">hoạt động</td>
+              <td>phoenix@untitledui.com</td>
+              <td class="action">
+                <a class="block">block</a>
+                <a class="unblock">unblock</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="user">
+                  <img src="https://i.pravatar.cc/40?img=3" />
+                  <div>
+                    Lana Steiner<br />
+                    <span class="username">@lana</span>
+                  </div>
+                </div>
+              </td>
+              <td class="status">hoạt động</td>
+              <td>lana@untitledui.com</td>
+              <td class="action">
+                <a class="block">block</a>
+                <a class="unblock">unblock</a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="btn">← Previous</button>
+
+          <div class="pages">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>...</span>
+            <span>9</span>
+            <span>10</span>
+          </div>
+
+          <button class="btn">Next →</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/user_manager.js"></script>
+  </body>
+</html>

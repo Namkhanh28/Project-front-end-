@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a href=""><b>RIKKEI_EDU_BLOG</b></a>
+      <div class="input">
+        <input type="text" placeholder="Search for  articles ... " />
+        <i class="fa-brands fa-sistrix"></i>
+      </div>
+      <div class="button">
+        <button class="login">Log in</button>
+        <button class="signout">Sign out</button>
+      </div>
+    </div>
+    <!-- Article Section -->
+    <section class="articles">
+      <button id="" type="button">
+        <h2>✏️ADD NEW ARTICLE</h2>
+      </button>
+      <div class="article-grid">
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-25</span>
+          <h3>A Productive Day at Work</h3>
+          <p>
+            Today was a really productive day at work. I managed to finish a
+            report ahead of schedule and received positive feedback from my
+            manager.
+          </p>
+          <span class="category">Daily Journal</span>
+          <button>Edit your post</button>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-21</span>
+          <h3>My First Job Interview Experience</h3>
+          <p>
+            I had my first job interview today! I was nervous at first, but as
+            the conversation went on, I felt more confident.
+          </p>
+          <span class="category">Work & Career</span>
+          <button>Edit your post</button>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-23</span>
+          <h3>Overthinking Everything</h3>
+          <p>
+            Lately, I have been overthinking everything, from small decisions to
+            bigger life choices. I know I should trust myself.
+          </p>
+          <span class="category">Personal Thoughts</span>
+          <button>Edit your post</button>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-16</span>
+          <h3>How collaboration makes us better designers</h3>
+          <p>
+            How collaboration can make our teams stronger, and our individual
+            designs better.
+          </p>
+          <span class="category">Work & Career</span>
+          <button>Edit your post</button>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-05</span>
+          <h3>Podcast: Creating a better CX Community</h3>
+          <p>
+            Starting a community doesn’t need to be complicated, but how do you
+            get started?
+          </p>
+          <span class="category">Emotions & Feelings</span>
+          <button>Edit your post</button>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
+            alt=""
+          />
+          <span class="date">2025-02-15</span>
+          <h3>Our top 10 Javascript frameworks to use</h3>
+          <p>
+            JavaScript frameworks make development easy with extensive features
+            and functionalities.
+          </p>
+          <span class="category">Work & Career</span>
+          <button>Edit your post</button>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#">← Previous</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span>…</span>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="#">Next →</a>
+      </div>
+    </section>
+
+    <!-- Pop up add Blog -->
+    <div class="shadow">
+      
+    </div>
+    <div class="pagelayer" id="pagelayer">
+      <div class="popup-header">
+        <div class="text">📌 Add New Article</div>
+        <div class="close">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </div>
+      <div class="writing-blog">
+        <div class="form-group">
+          <label>Title:</label>
+          <input id="input-title" class="input-title" type="text" />
+        </div>
+        <div class="form-group">
+          <label>Article Categories:</label>
+          <input class="input-category" id="input-category" type="text" />
+        </div>
+        <div class="form-group-icon">
+          <label>Mood:</label>
+          <select>
+            <option>😊 Happy</option>
+            <option>😢 Sad</option>
+            <option>😂 Very happy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Content:</label>
+          <textarea></textarea>
+        </div>
+      </div>
+      <div class="status">
+        <label>Status:</label>
+        <div class="mode">
+          <input class="radio" type="radio" name="status" /> public
+          <input class="radio" type="radio" name="status" /> private
+        </div>
+      </div>
+
+      <div class="upload-box">
+        <i class="fa-solid fa-cloud-arrow-up"></i><br />
+        Browse and choose the files you want<br />
+        to upload from your computer
+      </div>
+      <button class="submit-btn">Add Blog</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>MY BLOG</h3>
+        </div>
+
+        <div class="footer-column">
+          <h4>About</h4>
+          <p>
+            Rareblocks<br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            dictum quam et accumsan porttitor.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Delivery Details</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Free eBooks</a></li>
+            <li><a href="#">Development Tutorial</a></li>
+            <li><a href="#">How to – Blog</a></li>
+            <li><a href="#">YouTube Playlist</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #a9a6a6;
+    }
+    .header{
+      background-color: #e2dcdc;
+      display: flex;
+      justify-content: space-around;
+    }
+    .header a{
+      text-decoration: none;
+      padding-top: 25px;
+    }
+    input {
+  margin: 10px;
+  border: 1px solid ;
+  border-radius: 5px;
+  padding-left: 10px;
+  width:880px ;
+  height:40px ;
+}
+.fa-sistrix {
+  color: rgb(52, 51, 51);
+  position: relative;
+  top :2px;
+  right: 45px;
+}
+.control {
+  margin-top: 10px;
+  position: relative;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-circle-plus {
+  margin-top: 10px;
+  right:30px;
+  padding-right: 20px;
+  font-size: 28px;
+  color:black;
+}
+.fa-circle-user{
+  left:30px;
+  padding-right: 20px;
+  font-size: 40px;
+  color:black;
+  margin-top: 1px;
+}
+
+  h2 {
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+    .blog-container {
+      margin-left: 120px;
+      display: flex;
+      gap: 25px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+    }
+    .blog-content {
+      padding: 15px;
+    }
+    .blog-date {
+      font-size: 12px;
+      color: #38e938;
+    }
+    .blog-title {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+    .blog-text {
+      font-size: 14px;
+      color: #474545;
+    }
+    .blog-category {
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+     .blog-list{
+      margin: 30px 30px;
+     }
+     .tabs a {
+      margin-right: 15px;
+      color: #3b5bdb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .categories {
+      margin: 15px 0;
+    }
+
+    .categories span {
+      margin-right: 15px;
+     
+    }
+
+    /* FLEX CONTAINER */
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+      width: calc(30.33% - 14px); /* 3 cột */
+      background: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+     
+    }
+
+    .date {
+      font-size: 12px;
+      color: #6c63ff;
+      margin-top: 10px;
+    }
+
+    .title {
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .category {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #6c63ff;
+    }
+
+    /* Pagination */
+    .pagination {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #666;
+    }
+
+    .pages span {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .active {
+      background: #e0e7ff;
+      color: #3b5bdb;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-column h3, 
+    .footer-column h4 {
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin: 5px 0;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-column a:hover {
+      color: #0073e6;
+    }
+
+    .footer-social {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      color: #333;
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #0073e6;
+    }

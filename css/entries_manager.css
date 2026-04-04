@@ -1,0 +1,132 @@
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7fb;
+  }
+  .header {
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .header a {
+    position: relative;
+    right:1100px;
+  }
+  .header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+
+  /* LAYOUT */
+  .container {
+    display: flex;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 200px;
+    padding: 20px;
+  }
+
+  .menu {
+    border-color:1px solid aqua;
+    background: #e0ecff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* CONTENT */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* SEARCH */
+  .search-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .search-box input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+  /* CARD */
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  /* FORM */
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 8px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  th, td {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    font-size: 14px;
+    color: #555;
+  }
+
+  /* ACTION */
+  .btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .edit {
+    background: #22c55e;
+    color: white;
+  }
+
+  .delete {
+    background: #ef4444;
+    color: white;
+  }
