@@ -55,7 +55,6 @@ let statusInput = document.getElementById("status");
 let imgInput = document.getElementById("upfile");
 let addBtn = document.getElementById("addContent");
 
-// ====== MODAL ======
 function openModel() {
   document.getElementById("model").style.display = "flex";
   renderCategory();
@@ -140,6 +139,7 @@ function addArticle() {
       status: newStatus,
       image: newImage,
       date: new Date().toISOString().split("T")[0],
+      userId: JSON.parse(localStorage.getItem("currentUser")).id,
     };
     articles.push(newArticle);
     Swal.fire("Thành công", "Thêm bài viết thành công", "success");
