@@ -22,13 +22,11 @@ if (!data) {
   localStorage.setItem("users", JSON.stringify(defaultUsers));
 }
 let users = JSON.parse(localStorage.getItem("users")) || [];
-
 if (users.length === 0) {
   Swal.fire("Chưa có tài khoản", "Hãy đăng ký trước", "warning").then(() => {
     window.location.href = "./register.html";
   });
 }
-
 let form = document.getElementById("loginForm");
 form.addEventListener("submit", function (e) {
   e.preventDefault();

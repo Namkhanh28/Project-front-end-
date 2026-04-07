@@ -9,6 +9,7 @@ let articles = JSON.parse(localStorage.getItem("articles")) || [
     status: "Riêng tư",
     image: "image1.jpg",
     date: "2025-02-23",
+    userId:1,
   },
   {
     id: 2,
@@ -20,8 +21,11 @@ let articles = JSON.parse(localStorage.getItem("articles")) || [
     status: "Công khai",
     image: "image2.jpg",
     date: "2025-03-15",
+    userId:1
   },
 ];
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+articles = articles.filter((article) => article.userId == currentUser.id);
 let entries = JSON.parse(localStorage.getItem("entries")) || [
   { id: 1, name: "  Daily Journal " },
   { id: 2, name: " Work & Career " },
