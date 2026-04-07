@@ -1,21 +1,20 @@
 let entries = JSON.parse(localStorage.getItem("entries")) || [];
 if (entries.length === 0) {
   entries = [
-    {
-      id: 1,
-      name: "Nhật ký học tập",
-    },
-    {
-      id: 2,
-      name: "Nhật ký mục tiêu và kế hoạch",
-    },
-    {
-      id: 3,
-      name: "Nhật ký trải nghiệm - học qua đời sống",
-    },
+    { id: 1, name: "  Daily Journal " },
+    { id: 2, name: " Work & Career " },
+    { id: 3, name: " Personal Thoughts" },
+    { id: 4, name: " Emotions & Feelings" },
   ];
 
   localStorage.setItem("entries", JSON.stringify(entries));
+}
+
+function openPopUp() {
+  document.getElementById("popUp").style.display = "block";
+}
+function closePopUp() {
+  document.getElementById("popUp").style.display = "none";
 }
 const renderData = () => {
   let table = document.getElementById("entries-article");
@@ -23,7 +22,7 @@ const renderData = () => {
   entries.forEach((entry, index) => {
     let row = document.createElement("tr");
     row.innerHTML = `
-   <tr>
+   
                 <td>${index + 1}</td>
                 <td>${entry.name}</td>
                 <td>
@@ -32,7 +31,7 @@ const renderData = () => {
                     Xóa
                   </button>
                 </td>
-              </tr>
+              
     `;
     table.appendChild(row);
   });
@@ -76,8 +75,11 @@ const deleteEntries = (index) => {
     }
   });
 };
+let editIndex = null;
+let newContent = document.getElementById("newContent");
+let saveBtn = document.getElementById("update");
 
-const updateData = () => {
+const updateData = (index) => {
   Swal.fire({
     title: "Bạn có chắc?",
     text: "Không thể hoàn tác!",
@@ -87,8 +89,23 @@ const updateData = () => {
     cancelButtonText: "Hủy",
   }).then((result) => {
     if (result.isConfirmed) {
-      let item = entries.find((e) => e.id === id);
-      
+      editIndex = index;
+      let entry = entries[index];
+      openPopUp();
+      newContent.value = entry.name;
+      saveBtn.onclick = function () {
+        let updatedValue = newContent.value.trim();
+        if (updatedValue === "") {
+          Swal.fire("Lỗi", "Không được để trống", "error");
+          return;
+        }
+        entries[editIndex].name = updatedValue;
+        localStorage.setItem("entries", JSON.stringify(entries));
+        renderData();
+        closePopUp();
+        Swal.fire("Thành công", "Cập nhật thành công", "success");
+      };
     }
   });
+  
 };

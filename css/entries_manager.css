@@ -130,3 +130,47 @@
     background: #ef4444;
     color: white;
   }
+/* Pop Up  */
+#popUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+   display: none; 
+  z-index: 1000;
+  width: 300px;
+}
+
+#popUp h3 {
+  text-align: center;
+}
+#popUp input {
+  margin-right: 10px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.choose{
+  display: flex;
+  justify-content: space-around;
+}
+#popUp button {
+  width: 50%;
+  padding: 8px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+#popUp button:hover{
+  background: #555;
+}
+#popUp .close{
+  margin-left: 20px;
+  background-color: #ccc;
+  color: #555;
+}

@@ -1,153 +1,190 @@
-  body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #a9a6a6;
-    }
-    .header{
-      background-color: #e2dcdc;
-      display: flex;
-      justify-content: space-around;
-    }
-    .header a{
-      text-decoration: none;
-      padding-top: 25px;
-    }
-.input input {
-  width: 1080px;
-  margin: 10px;
-  border: 1px solid ;
-  border-radius: 5px;
-  padding-left: 10px;
-  width:880px ;
-  height:45px ;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.fa-sistrix {
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+  color: #333;
+
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+/* SEARCH */
+.input {
   position: relative;
-  top :2px;
-  right: 45px;
 }
+
+.input input {
+  width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding-left: 35px;
+}
+
+.fa-sistrix {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #888;
+}
+
+/* BUTTON */
 .button {
-  padding-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.button button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.button button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ================= ARTICLES ================= */
+.articles {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.articles button {
+  border: none;
+  padding: 8px 15px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.articles button:hover {
+  background: #4f46e5;
+}
+
+.article-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CARD */
+.article-card {
+  width: calc(33.33% - 14px);
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXT */
+.article-card h3 {
+  margin: 10px 0;
+  color: #3b5bdb;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.date {
+  font-size: 12px;
+  color: #888;
+}
+
+.category {
+  font-size: 15px;
+  font-weight: 500;
+  color: #22c55e;
+  margin-top: 8px;
+}
+
+/* BUTTON */
+.article-card button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: none;
+  background: #3b5bdb;
+  color: white;
+  border-radius: 6px;
+}
+#repair{
   display: flex;
   justify-content: space-between;
-  gap: 5px;
 }
-.login {
-  border: 1px solid #333 ;
-  width: 70px;
-  height: 30px;
-  border-radius: 8px;
+.article-card button:hover {
+  background: #1d4ed8;
 }
-.signout {
-  border: 1px solid #333 ;
-  border-radius: 8px;
-  width: 70px;
-  height: 30px;
+
+/* ================= PAGINATION ================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+  padding-bottom: 20px;
 }
-.login:hover{
- background-color: #333;
- border-color: #f4f4f4;
- color: #f8f9fa;
+
+.pagination a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #3b5bdb;
 }
-.signout:hover{
- background-color: #333;
- border-color: #f4f4f4;
-color: #f8f9fa;
+
+.pagination a:hover {
+  background: #e0e7ff;
 }
-   .articles {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
 
-     .articles button{
-      border: none;
-      padding: 5px 10px;
-      position: relative;
-      bottom: 15px;
-      background-color: #98a4b0;
-      border-radius: 8px;
-      padding-right: 10px;
-     }
-     .articles button:hover{
-      background-color: #5c87b2;
-      color:#e2dcdc;
-     }
-     
-    .articles h2 {
-      text-align: center;
-      margin-bottom: 12px;
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .article-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-    }
-    .article-card img{
-      width: 350px;
-      height: 160px;
-      border-radius: 8px;
-     }
-
-    .article-card h3 {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #0073e6;
-    }
-
-    .article-card p {
-      font-size: 14px;
-    }
-
-    .article-card .date {
-      font-size: 12px;
-      color: #545050;
-    }
-
-    .article-card .category {
-      font-size: 13px;
-      color: #22af2e;
-      margin-top: 10px;
-      display: block;
-    }
-
-    .article-card button {
-      margin-top: 15px;
-      padding: 8px 12px;
-      border: none;
-      background: #0073e6;
-      color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .article-card button:hover {
-      background: #005bb5;
-    }
-   
-    .pagination {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .pagination a {
-      margin: 0 5px;
-      text-decoration: none;
-      color: #0073e6;
-    }
-
-    .pagination a:hover {
-      text-decoration: underline;
-    }
-    .footer {
+/* ================= FOOTER ================= */
+ .footer {
+      border-top: 1px solid rgb(97, 95, 95);
       background-color: #f8f9fa;
       padding: 40px 20px;
       color: #333;
@@ -204,96 +241,102 @@ color: #f8f9fa;
     .footer-social a:hover {
       color: #0073e6;
     }
+
+/* ================= POPUP ================= */
+
+/* overlay */
 .shadow {
-  position: fixed;       
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5); 
-  z-index: 2;           
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: none;
 }
 
-/* Pop Up Thêm bài */
+/* popup */
 .pagelayer {
+  display: none;
   position: fixed;
-  top: 30px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  max-width: 1200px;
-  max-height: 700px;
-  background: #f3f3f3;
-  border: 2px solid #1e90ff;
-  padding: 12px;
-  z-index: 3; /* cao hơn shadow */
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+/* header popup */
 .popup-header {
   display: flex;
- justify-content:space-between;
-}
-.text {
-font-size: 20px;
-color: #0073e6;
-}
-.close {
-  font-size: 40px;
-  color: crimson;
-}
-.writing-blog{
-  gap:10px;
-  display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
 }
-.writing-blog label{
-  color: #333;
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3b5bdb;
 }
-.form-group {
- display: flex;
- flex-direction: column;
-}
-.form-group textarea{
- padding: 5px;
- width: 100%;
- height: 100%;
-}
-.status {
-  margin: 20px 0;
-  display: flex;
-}
-.status label{
-  color: #333;
-}
- .startus .radio {
-   size: 5px;
- }
-.status .mode{
-  display: flex;
-  justify-content: flex-start;
-}
-.upload-box {
-  padding: auto;
-  padding: 10px;
-  text-align: center;
-  background-color: #6d6d6d;
-  color: #eeeaea;
-  border-radius: 8px;
-  margin-bottom: 8px;
+
+.close {
+  font-size: 20px;
   cursor: pointer;
 }
-.fa-cloud-arrow-up {
-  size: 30px;
+
+/* FORM */
+.writing-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+/* STATUS */
+.status {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* UPLOAD */
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* BUTTON */
 .submit-btn {
-       padding: 10px;
-       align-items: center;
-       justify-content: center;
-        border-radius: 5px;
-        margin-top: 10px;
-        padding: 6px 12px;
-        background: #28a745;
-        color: white;
-        border: none;
+  background: #22c55e;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #16a34a;
 }

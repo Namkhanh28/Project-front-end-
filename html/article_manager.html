@@ -3,53 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/article_manager.css" />
     <title>Quản lí bài viết</title>
   </head>
+
   <body>
     <!-- HEADER -->
     <div class="header">
-      <a href="../html/dashboard.html"><b>RIKKEI_EDU_BLOG</b></a>
-      🔔
-      <img src="https://i.pravatar.cc/40" />
+      <a href="../index.html">RIKKEI_EDU_BLOG</a>
+
+      <div class="header-right">
+        <span>🔔</span>
+        <img src="https://i.pravatar.cc/40" />
+      </div>
     </div>
 
     <div class="container">
       <!-- SIDEBAR -->
       <div class="sidebar">
-        <div class="menu">👤 Manage Users</div>
-        <div class="menu">📄 Manage Entries</div>
-        <div class="menu">📝 Manage Article</div>
+        <div class="menu"><a href="./user_manager.html">👤 Manage Users</a></div>
+        <div class="menu"><a href="./entries_manaager.html">📄 Manage Entries</a></div>
+        <div class="menu"><a href="./article_manager.html">📝 Manage Article</a></div>
         <div class="menu">🚪 Log out</div>
       </div>
 
+      <!-- CONTENT -->
       <div class="content">
         <div class="title">Quản lý bài viết</div>
-        <button id="addContent" class="add-btn">+ Thêm mới bài viết</button>
+
+        <button onclick="openModel()" class="add-btn">
+          + Thêm mới bài viết
+        </button>
+
         <table>
           <thead>
-            <th>Ảnh</th>
-            <th>Tiêu đề</th>
-            <th>Chủ đề</th>
-            <th>Nội dung</th>
-            <th>Trạng thái</th>
-            <th>Chỉnh sửa trạng thái</th>
-            <th>Hành động</th>
+            <tr>
+              <th>Ảnh</th>
+              <th>Tiêu đề</th>
+              <th>Chủ đề</th>
+              <th>Nội dung</th>
+              <th>Trạng thái</th>
+              <th>Chỉnh sửa</th>
+              <th>Hành động</th>
+            </tr>
           </thead>
-          <!-- ROW -->
+
           <tbody id="articleTable">
             <tr>
               <td><img class="thumb" src="https://picsum.photos/100" /></td>
-              <td>Học nấu cá sốt cà chua</td>
+              <td>Học nấu cá</td>
               <td>Nấu ăn</td>
-              <td>Tôi đã học được cách nấu ăn...</td>
+              <td>Học cách nấu ăn đơn giản...</td>
               <td><span class="status-public">Public</span></td>
               <td>
                 <select>
@@ -57,27 +67,9 @@
                   <option>Private</option>
                 </select>
               </td>
-              <td>
-                <button class="btn edit">Sửa</button>
-                <button class="btn delete">Xóa</button>
-              </td>
-            </tr>
-
-            <tr>
-              <td><img class="thumb" src="https://picsum.photos/101" /></td>
-              <td>Bí kíp viết CV ngành IT</td>
-              <td>IT</td>
-              <td>Chia sẻ cách viết CV ấn tượng...</td>
-              <td><span class="status-private">Private</span></td>
-              <td>
-                <select>
-                  <option>Private</option>
-                  <option>Public</option>
-                </select>
-              </td>
-              <td>
-                <button class="btn edit">Sửa</button>
-                <button class="btn delete">Xóa</button>
+              <td class="option">
+                <button id="edit" class="btn edit">Sửa</button>
+                <button onclick="deleteArticle()" class="btn delete">Xóa</button>
               </td>
             </tr>
           </tbody>
@@ -91,54 +83,63 @@
             <span class="active">1</span>
             <span>2</span>
             <span>3</span>
-            <span>...</span>
-            <span>9</span>
-            <span>10</span>
           </div>
 
           <button class="page-btn">Next →</button>
         </div>
       </div>
     </div>
-    <!-- Pop up model  -->
-    <div id="model" class="page-title">
-      <div id="form-aticle" class="form-box">
-        <div id="close" class="close">✖</div>
+
+    <!-- POPUP -->
+    <div id="model" class="modal">
+      <div class="form-box">
+        <div onclick="closeModel()" class="close">✖</div>
+
         <div class="form-group">
           <label>Title:</label>
           <input id="title" type="text" />
         </div>
+
         <div class="form-group">
-          <label>Article Categories:</label>
-          <input id="category" type="text" />
-        </div>
-        <div id=" mood-content" class="form-group">
+         <label>Category:</label>
+         <select id="category"></select>
+         </div>
+  
+
+        <div class="form-group">
           <label>Mood:</label>
           <select>
-            <option>😊 Happy</option>
-            <option>😢 Sad</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😢 Sad</option>
           </select>
         </div>
+
         <div class="form-group">
           <label>Content:</label>
           <textarea id="content"></textarea>
         </div>
-        <div class="status-user">
-          <label>Status :</label>
-          <select>
-            <option id="status" type="radio" name="status">Public</option>
-            <option id="status" type="radio" name="status">Private</option>
+
+        <div class="form-group">
+          <label>Status:</label>
+          <select id="status">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
           </select>
         </div>
-        <div class="upload">
-          ⬆<br />
-          Browse and choose the files you want<br />
-          to upload from your computer
-        </div>
 
-        <button id="btn-add" class="btn">Add</button>
+        <input id="upfile" class="upload" placeholder="Nhập URL">
+          <i class="fa-solid fa-upload"></i>
+          <br />
+          Browse and chose the files <br />
+          you want to upload from your computer
+        </input>
+
+        <button onclick="addArticle()" id="addContent" class="submit-btn">Add</button>
+
       </div>
     </div>
+
+
     <script src="../js/article_manager.js"></script>
   </body>
 </html>

@@ -16,22 +16,22 @@
   <body>
     <!-- Header -->
     <div class="header">
-      <a href=""><b>RIKKEI_EDU_BLOG</b></a>
+      <a href="./html/dashboard.html"><b>RIKKEI_EDU_BLOG</b></a>
       <div class="input">
         <input type="text" placeholder="Search for  articles ... " />
         <i class="fa-brands fa-sistrix"></i>
       </div>
       <div class="button">
-        <button class="login">Log in</button>
-        <button class="signout">Sign out</button>
+        <button onclick="login()" class="login">Log in</button>
+        <button onclick="signOut()"class="signout">Sign out</button>
       </div>
     </div>
     <!-- Article Section -->
     <section class="articles">
-      <button id="" type="button">
+      <button onclick="openModel()" id="openAddMode" type="button">
         <h2>✏️ADD NEW ARTICLE</h2>
       </button>
-      <div class="article-grid">
+      <div onclick="openComment()" class="article-grid">
         <div class="article-card">
           <img
             src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
@@ -44,11 +44,13 @@
             report ahead of schedule and received positive feedback from my
             manager.
           </p>
-          <span class="category">Daily Journal</span>
-          <button>Edit your post</button>
+          <div id="repair">
+            <span class="category">Daily Journal</span>
+            <button>Edit your post</button>
+          </div>
         </div>
 
-        <div class="article-card">
+        <!-- <div class="article-card">
           <img
             src="../assets/images/9ca412fa840de131974162b09d68033e23a850b5.jpg"
             alt=""
@@ -122,8 +124,10 @@
           <span class="category">Work & Career</span>
           <button>Edit your post</button>
         </div>
-      </div>
+      </div> -->
 
+    
+    </section>
       <!-- Pagination -->
       <div class="pagination">
         <a href="#">← Previous</a>
@@ -135,16 +139,13 @@
         <a href="#">10</a>
         <a href="#">Next →</a>
       </div>
-    </section>
 
     <!-- Pop up add Blog -->
-    <div class="shadow">
-      
-    </div>
-    <div class="pagelayer" id="pagelayer">
+    <div class="shadow"></div>
+    <div class="pagelayer" id="page-layer">
       <div class="popup-header">
         <div class="text">📌 Add New Article</div>
-        <div class="close">
+        <div onclick="closeModel()" class="close">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
       </div>
@@ -155,8 +156,9 @@
         </div>
         <div class="form-group">
           <label>Article Categories:</label>
-          <input class="input-category" id="input-category" type="text" />
+          <select name="" id="category"></select>
         </div>
+        
         <div class="form-group-icon">
           <label>Mood:</label>
           <select>
@@ -178,11 +180,11 @@
         </div>
       </div>
 
-      <div class="upload-box">
+      <input id="image" placeholder="Nhập URL" class="upload-box">
         <i class="fa-solid fa-cloud-arrow-up"></i><br />
         Browse and choose the files you want<br />
         to upload from your computer
-      </div>
+      </input>
       <button class="submit-btn">Add Blog</button>
     </div>
 
@@ -234,7 +236,7 @@
       </div>
 
       <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-google"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -242,5 +244,6 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    
   </body>
 </html>

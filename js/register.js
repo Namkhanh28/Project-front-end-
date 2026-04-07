@@ -31,6 +31,7 @@ registerBtn.addEventListener("click", function (event) {
     return;
   }
   let users = JSON.parse(localStorage.getItem("users")) || [];
+  
   let exist = users.find(function (user) {
     return user.email === email;
   });
@@ -40,12 +41,16 @@ registerBtn.addEventListener("click", function (event) {
     return;
   }
   let user = {
-    id:Date.now(),
+    id: Date.now(),
     firstName: firstName,
     lastName: lastName,
     email: email,
     password: password,
+    role: "user",
   };
+  if (password === "admin345" && email === "admin01@gmail.com") {
+    user.role = "admin";
+  }
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
   Swal.fire({

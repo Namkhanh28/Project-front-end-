@@ -17,7 +17,7 @@
   <body>
     <!-- HEADER -->
     <div class="header">
-      <a href=""><b>RIKKEI_EDU_BLOG</b></a>
+      <a href="/index.html"><b>RIKKEI_EDU_BLOG</b></a>
       🔔
       <img src="https://i.pravatar.cc/40" />
     </div>
@@ -25,10 +25,16 @@
     <div class="container">
       <!-- SIDEBAR -->
       <div class="sidebar">
-        <div class="menu">👤 Manage Users</div>
-        <div class="menu">📄 Manage Entries</div>
-        <div class="menu">📝 Manage Article</div>
-        <div class="menu">🚪 Log out</div>
+        <div class="menu">
+          <a href="./user_manager.html">👤 Manage Users</a>
+        </div>
+        <div class="menu">
+          <a href="./entries_manaager.html">📄 Manage Entries</a>
+        </div>
+        <div class="menu">
+          <a href="./article_manager.html">📝 Manage Article</a>
+        </div>
+        <div class="menu"><a href="./register.html">🔚Log out</a></div>
       </div>
 
       <!-- CONTENT -->
@@ -78,6 +84,14 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+    <div id="popUp">
+      <h3>Update Entries</h3>
+      <input id="newContent" type="text" placeholder="New Article" />
+      <div class="choose">
+        <button id="update">Cập nhật</button>
+        <button onclick="closePopUp()" class="close">Hủy</button>
       </div>
     </div>
     <script src="../js/entries_manager.js"></script>
